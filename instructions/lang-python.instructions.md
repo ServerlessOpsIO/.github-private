@@ -12,6 +12,8 @@ applyTo: '**/*.py'
 - Provide docstrings following PEP 257 conventions.
 - Use the `typing` module for type annotations (e.g., `List[str]`, `Dict[str, int]`).
 - Break down complex functions into smaller, more manageable functions.
+- Use `TypedDict` for structured data when appropriate.
+  - Use `dataclasses` for structured data when methods or default values are needed.
 
 ## General Instructions
 
