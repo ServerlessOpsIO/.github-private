@@ -40,6 +40,15 @@ applyTo: '**/*.py'
 - Include comments for edge cases and the expected behavior in those cases.
 - Write unit tests for functions and document them with docstrings explaining the test cases.
 
+## Dependency Management & Virtual Environments
+
+- Use `pipenv` to manage dependencies and virtual environments.
+- Include a `Pipfile` in the project to track dependencies and their versions.
+- A `Pipfile.lock` should be generated using `pipenv` and committed to version control for consistent dependency management across different environments.
+- When adding new dependencies:
+  - update the `Pipfile` and regenerate the `Pipfile.lock` to ensure all dependencies are properly tracked and versioned.
+  - preffer using the latest compatible version of the dependency unless there is a specific reason to use an older version (for example compatibility with other dependencies or known issues with newer versions).
+
 ## Example of Proper Documentation
 
 ```python
