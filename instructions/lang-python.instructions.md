@@ -17,9 +17,7 @@ applyTo: '**/*.py'
 
 ## Python Instructions
 
-- Write clear and concise comments for each function.
 - Ensure functions have descriptive names and include type hints.
-- Provide docstrings following PEP 257 conventions.
 - Use the `typing` module for type annotations (e.g., `List[str]`, `Dict[str, int]`).
 - Break down complex functions into smaller, more manageable functions.
 - Use `TypedDict` for structured data when appropriate.
@@ -30,7 +28,6 @@ applyTo: '**/*.py'
 - Follow the **PEP 8** style guide for Python.
 - Maintain proper indentation (use 4 spaces for each level of indentation).
 - Ensure lines do not exceed 79 characters.
-- Place function and class docstrings immediately after the `def` or `class` keyword.
 - Use blank lines to separate functions, classes, and code blocks where appropriate.
 
 ## Edge Cases and Testing
@@ -49,9 +46,18 @@ applyTo: '**/*.py'
   - update the `Pipfile` and regenerate the `Pipfile.lock` to ensure all dependencies are properly tracked and versioned.
   - preffer using the latest compatible version of the dependency unless there is a specific reason to use an older version (for example compatibility with other dependencies or known issues with newer versions).
 
-## Example of Proper Documentation
+## Documentation
+- Provide docstrings following PEP 257 conventions.
+- Docstrings should include a description of the function's purpose, its parameters (with types), return value (with type), and any exceptions that may be raised.
+- Place function and class docstrings immediately after the `def` or `class` keyword.
+- Write clear and concise comments within a function, sparingly and only when necessary, to explain complex logic or important details.
+- Docstrings should describe what codes does while comments should explain how the code does it and why certain decisions were made. Avoid redundant comments that simply restate what the code does without adding additional context or explanation.
+
+### Documentation Example
 
 ```python
+import math
+
 def calculate_area(radius: float) -> float:
     """
     Calculate the area of a circle given the radius.
@@ -62,6 +68,5 @@ def calculate_area(radius: float) -> float:
     Returns:
     float: The area of the circle, calculated as π * radius^2.
     """
-    import math
     return math.pi * radius ** 2
 ```
