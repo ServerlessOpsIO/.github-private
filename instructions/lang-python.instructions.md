@@ -5,16 +5,6 @@ applyTo: '**/*.py'
 
 # Python Coding Conventions
 
-## Python Instructions
-
-- Write clear and concise comments for each function.
-- Ensure functions have descriptive names and include type hints.
-- Provide docstrings following PEP 257 conventions.
-- Use the `typing` module for type annotations (e.g., `List[str]`, `Dict[str, int]`).
-- Break down complex functions into smaller, more manageable functions.
-- Use `TypedDict` for structured data when appropriate.
-  - Use `dataclasses` for structured data when methods or default values are needed.
-
 ## General Instructions
 
 - Always prioritize readability and clarity.
@@ -24,6 +14,16 @@ applyTo: '**/*.py'
 - For libraries or external dependencies, mention their usage and purpose in comments.
 - Use consistent naming conventions and follow language-specific best practices.
 - Write concise, efficient, and idiomatic code that is also easily understandable.
+
+## Python Instructions
+
+- Write clear and concise comments for each function.
+- Ensure functions have descriptive names and include type hints.
+- Provide docstrings following PEP 257 conventions.
+- Use the `typing` module for type annotations (e.g., `List[str]`, `Dict[str, int]`).
+- Break down complex functions into smaller, more manageable functions.
+- Use `TypedDict` for structured data when appropriate.
+  - Use `dataclasses` for structured data when methods or default values are needed.
 
 ## Code Style and Formatting
 
