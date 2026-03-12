@@ -58,10 +58,12 @@ applyTo: '**/template.yaml, **/template.yml, **/cloudformation.yaml, **/cloudfor
 - Use `AllowedValues` and `AllowedPattern` to enforce valid parameter inputs where possible.
 - Use `Default` values for parameters when there is a common default that applies to most environments
 - Use `Description` for parameters to clarify their purpose and expected values.
+- Paramater values should be defined in the `cfn-parameters.json` file in key value pairs and passed at deploy time instead of using default values.
 
 ## Tags
 
 - Tags should be passed to the deploy command instead of defined at the resource level when possible.
+- Tags should be defined in the cfn-tags.json file in key value pairs
 
 ## SSM Parameters
 
