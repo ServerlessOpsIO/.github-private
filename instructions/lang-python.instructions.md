@@ -10,7 +10,6 @@ applyTo: '**/*.py'
 - Prioritize readability and clarity.
 - Explain algorithms and key design decisions in comments.
 - Handle edge cases and exceptions clearly.
-- Note the purpose of external libraries in comments.
 - Use consistent, idiomatic naming and code style.
 - Respect existing architecture and patterns before creating new abstractions.
 - Prefer explicit, readable solutions over clever shortcuts.
