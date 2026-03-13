@@ -33,6 +33,14 @@ applyTo: '**/*.py'
 - Ensure lines do not exceed 96 characters.
 - Use 2 blank lines to separate functions, classes, and code blocks where appropriate.
 
+## Tools
+
+- Use `black` for code formatting
+- Use `flake8` for linting.
+- Use `mypy` for static type checking.
+- Use `pytest` for testing.
+- Use `pipenv` for dependency management.
+
 ## Edge Cases and Testing
 
 - Always write unit tests for critical code paths and edge cases.
@@ -41,7 +49,6 @@ applyTo: '**/*.py'
 
 ## Dependency Management & Virtual Environments
 
-- Use `pipenv` for dependency and virtual environment management.
 - Track dependencies in `Pipfile` and commit both `Pipfile` and `Pipfile.lock` to version control.
 - When adding dependencies, update both files with `pipenv`, preferring the latest compatible versions unless specific compatibility issues require otherwise.
 
