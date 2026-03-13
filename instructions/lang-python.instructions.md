@@ -40,10 +40,12 @@ applyTo: '**/*.py'
 - Use `pytest` for testing.
 - Use `pipenv` for dependency management.
 
-## Edge Cases and Testing
+## Testing and Edge Cases
 
 - Always write unit tests for critical code paths and edge cases.
 - Test for empty inputs, invalid types, and large datasets.
+- Add/update unit tests for behavior changes and edge cases.
+- Add integration tests when behavior crosses service or IO boundaries.
 - Add comments explaining the purpose of each test and any special edge cases.
 
 ## Dependency Management & Virtual Environments
