@@ -28,6 +28,7 @@ applyTo: '**/*.py'
 
 - Use descriptive function names and type hints.
 - Break complex functions into smaller ones.
+- Catch exceptions and re-raise with context when necessary.
 
 ## Types
 
