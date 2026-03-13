@@ -13,6 +13,11 @@ applyTo: '**/*.py'
 - Note the purpose of external libraries in comments.
 - Use consistent, idiomatic naming and code style.
 - Respect existing architecture and patterns before creating new abstractions.
+- Prefer explicit, readable solutions over clever shortcuts.
+- Document tradeoffs when intent is not obvious.
+- Reuse existing project scripts for lint, format, and tests unless asked otherwise.
+- Follow repository folder conventions for modules, tests, and shared code.
+- Never hardcode secrets; use secure configuration sources.
 
 ## Python Instructions
 
