@@ -6,6 +6,7 @@ applyTo: '**/src/handlers/*/function.py, **/tests/*/handlers/*/test_function.py,
 ## General
 - Follow the general Python coding conventions outlined in lang-python.instructions.md.
 - Follow the general Cloudformation and SAM conventions outlined in iac-cloudformation.instructions.md and iac-sam.instructions.md.
+- Follow the Lambda infrastructure conventions in cloud-aws-lambda.instructions.md.
 - Prioritize readability and maintainability while adhering to AWS best practices for serverless applications.
 
 ## Lambda Functions
