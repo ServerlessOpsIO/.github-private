@@ -18,6 +18,7 @@ applyTo: '**/*.ts'
 
 - Target TypeScript 5.x / ES2022 and prefer native features over polyfills.
 - Use pure ES modules; never emit `require`, `module.exports`, or CommonJS helpers.
+- prefer `yarn` over `npm` for package management unless the project standardizes on npm.
 - Rely on the project's build, lint, and test scripts unless asked otherwise.
 - Note design trade-offs when intent is not obvious.
 
@@ -36,7 +37,6 @@ applyTo: '**/*.ts'
 
 ## Formatting & Style
 
-- Run the repository's lint/format scripts (e.g., `npm run lint`) before submitting.
 - Match the project's indentation, quote style, and trailing comma rules.
 - Keep functions focused; extract helpers when logic branches grow.
 - Favor immutable data and pure functions when practical.
