@@ -19,14 +19,14 @@ applyTo: '**/*.py'
 - Follow repository folder conventions for modules, tests, and shared code.
 - Never hardcode secrets; use secure configuration sources.
 
-## Python Instructions
+## Code
 
 - Use descriptive function names and type hints.
 - Prefer the `typing` module for type annotations.
 - Break complex functions into smaller ones.
 - Use `TypedDict` or `dataclasses` for structured data. Prefer `TypedDict` over `dataclasses`.
 
-## Code Style and Formatting
+## Style and Formatting
 
 - Follow the **PEP 8** style guide for Python.
 - Maintain proper indentation (use 4 spaces for each level of indentation).
