@@ -17,7 +17,6 @@ applyTo: '**/*.py'
 - Document tradeoffs when intent is not obvious.
 - Reuse existing project scripts for lint, format, and tests unless asked otherwise.
 - Follow repository folder conventions for modules, tests, and shared code.
-- Never hardcode secrets; use secure configuration sources.
 
 ## Code
 
@@ -51,6 +50,14 @@ applyTo: '**/*.py'
 
 - Track dependencies in `Pipfile` and commit both `Pipfile` and `Pipfile.lock` to version control.
 - When adding dependencies, update both files with `pipenv`, preferring the latest compatible versions unless specific compatibility issues require otherwise.
+
+## Security
+
+- Validate and sanitize all external inputs.
+- Never hardcode secrets; use secure configuration sources.
+- Use parameterized queries for database access.
+- Avoid dynamic code execution (eval/exec) on untrusted input.
+- Prefer vetted crypto libraries and secure defaults.
 
 ## Documentation
 
