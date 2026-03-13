@@ -50,6 +50,8 @@ applyTo: '**/src/handlers/*/function.py, **/tests/*/handlers/*/test_function.py,
 - Use the `moto` library for mocking AWS services in unit tests to enable testing without actual AWS resources.
 - Use the `pytest` framework for writing and running unit tests, and follow its conventions for test discovery and organization.
 - Validate all mock data against their schemas in tests to ensure test data integrity.
+- Cover success path, validation failures, and AWS service failure behavior.
+- Validate that error responses preserve the expected schema and status code mapping.
 
 #### File Structure
 - Unit tests: `tests/unit/handlers/<FunctionName>/test_function.py`
@@ -57,7 +59,7 @@ applyTo: '**/src/handlers/*/function.py, **/tests/*/handlers/*/test_function.py,
 - End-to-end tests: `tests/ete/handlers/<FunctionName>/test_function.py`
 - All `tests/` subdirectories must include `__init__.py` files
 
-## Common Code
+### Common Code
 - Common code that is shared across multiple Lambda functions should be placed in the installable package named `common`.
 - The `common` package should be created under the `src/common/` directory.
 - The `common` package should be structured as a standard Python package with an `__init__.py` file and any necessary submodules.
