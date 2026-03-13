@@ -7,51 +7,45 @@ applyTo: '**/*.py'
 
 ## General Instructions
 
-- Always prioritize readability and clarity.
-- For algorithm-related code, include explanations of the approach used.
-- Write code with good maintainability practices, including comments on why certain design decisions were made.
-- Handle edge cases and write clear exception handling.
-- For libraries or external dependencies, mention their usage and purpose in comments.
-- Use consistent naming conventions and follow language-specific best practices.
-- Write concise, efficient, and idiomatic code that is also easily understandable.
+- Prioritize readability and clarity.
+- Explain algorithms and key design decisions in comments.
+- Handle edge cases and exceptions clearly.
+- Note the purpose of external libraries in comments.
+- Use consistent, idiomatic naming and code style.
+- Respect existing architecture and patterns before creating new abstractions.
 
 ## Python Instructions
 
-- Ensure functions have descriptive names and include type hints.
-- Use the `typing` module for type annotations (e.g., `List[str]`, `Dict[str, int]`).
-- Break down complex functions into smaller, more manageable functions.
-- Use `TypedDict` for structured data when appropriate.
-  - Use `dataclasses` for structured data when methods or default values are needed.
+- Use descriptive function names and type hints.
+- Prefer the `typing` module for type annotations.
+- Break complex functions into smaller ones.
+- Use `TypedDict` or `dataclasses` for structured data. Prefer `TypedDict` over `dataclasses`.
 
 ## Code Style and Formatting
 
 - Follow the **PEP 8** style guide for Python.
 - Maintain proper indentation (use 4 spaces for each level of indentation).
-- Ensure lines do not exceed 79 characters.
-- Use blank lines to separate functions, classes, and code blocks where appropriate.
+- Ensure lines do not exceed 96 characters.
+- Use 2 blank lines to separate functions, classes, and code blocks where appropriate.
 
 ## Edge Cases and Testing
 
-- Always include test cases for critical paths of the application.
-- Account for common edge cases like empty inputs, invalid data types, and large datasets.
-- Include comments for edge cases and the expected behavior in those cases.
-- Write unit tests for functions and document them with docstrings explaining the test cases.
+- Always write unit tests for critical code paths and edge cases.
+- Test for empty inputs, invalid types, and large datasets.
+- Add comments explaining the purpose of each test and any special edge cases.
 
 ## Dependency Management & Virtual Environments
 
-- Use `pipenv` to manage dependencies and virtual environments.
-- Include a `Pipfile` in the project to track dependencies and their versions.
-- A `Pipfile.lock` should be generated using `pipenv` and committed to version control for consistent dependency management across different environments.
-- When adding new dependencies:
-  - update the `Pipfile` and regenerate the `Pipfile.lock` to ensure all dependencies are properly tracked and versioned.
-  - preffer using the latest compatible version of the dependency unless there is a specific reason to use an older version (for example compatibility with other dependencies or known issues with newer versions).
+- Use `pipenv` for dependency and virtual environment management.
+- Track dependencies in `Pipfile` and commit both `Pipfile` and `Pipfile.lock` to version control.
+- When adding dependencies, update both files with `pipenv`, preferring the latest compatible versions unless specific compatibility issues require otherwise.
 
 ## Documentation
-- Provide docstrings following PEP 257 conventions.
-- Docstrings should include a description of the function's purpose, its parameters (with types), return value (with type), and any exceptions that may be raised.
-- Place function and class docstrings immediately after the `def` or `class` keyword.
-- Write clear and concise comments within a function, sparingly and only when necessary, to explain complex logic or important details.
-- Docstrings should describe what codes does while comments should explain how the code does it and why certain decisions were made. Avoid redundant comments that simply restate what the code does without adding additional context or explanation.
+
+- Use PEP 257-style docstrings for all public functions and classes.
+- Docstrings should describe the purpose, parameters (with types), return value (with type), and exceptions.
+- Place docstrings immediately after the `def` or `class` line.
+- Use comments only to clarify complex logic or important decisions; avoid restating what the code does.
 
 ### Documentation Example
 
