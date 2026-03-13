@@ -22,6 +22,7 @@ applyTo: '**/src/handlers/*/function.py, **/template.yaml, **/template.yml, **/s
 - Define a `_main(data)` function containing the core business logic.
 - Extract helper logic into `_` prefixed functions above `_main` and `handler`.
 - Include error handling and structured logging via `aws-lambda-powertools`.
+- Use the `@event_source` decorator from `aws-lambda-powertools` to validate and parse the incoming event against the defined schema.
 
 #### File Structure
 - Each Lambda function gets its own directory: `src/handlers/<FunctionName>/`
@@ -47,6 +48,7 @@ applyTo: '**/src/handlers/*/function.py, **/template.yaml, **/template.yml, **/s
 ### Tests
 - Use the `moto` library for mocking AWS services in unit tests to enable testing without actual AWS resources.
 - Use the `pytest` framework for writing and running unit tests, and follow its conventions for test discovery and organization.
+- Validate all mock data against their schemas in tests to ensure test data integrity.
 
 #### File Structure
 - Unit tests: `tests/unit/handlers/<FunctionName>/test_function.py`
