@@ -30,6 +30,14 @@ applyTo: '**/*.py'
 - Use descriptive function names and type hints.
 - Break complex functions into smaller ones.
 
+## Types
+
+- Prefer the `typing` module for type annotations.
+- Use `TypedDict` or `dataclasses` for structured data.
+- Prefer `TypedDict` over `dataclasses` except when you need methods, default values, or immutability.
+- Avoid `Any` unless absolutely necessary; prefer precise types and narrowing.
+- All function parameters and return types should be annotated with type hints.
+- Centralize shared types to avoid duplicated shape definitions.
 
 ## Tools
 
