@@ -18,19 +18,18 @@ applyTo: '**/*.py'
 - Reuse existing project scripts for lint, format, and tests unless asked otherwise.
 - Follow repository folder conventions for modules, tests, and shared code.
 
-## Code
-
-- Use descriptive function names and type hints.
-- Prefer the `typing` module for type annotations.
-- Break complex functions into smaller ones.
-- Use `TypedDict` or `dataclasses` for structured data. Prefer `TypedDict` over `dataclasses`.
-
 ## Style and Formatting
 
 - Follow the **PEP 8** style guide for Python.
 - Maintain proper indentation (use 4 spaces for each level of indentation).
 - Ensure lines do not exceed 96 characters.
 - Use 2 blank lines to separate functions, classes, and code blocks where appropriate.
+
+## Code
+
+- Use descriptive function names and type hints.
+- Break complex functions into smaller ones.
+
 
 ## Tools
 
