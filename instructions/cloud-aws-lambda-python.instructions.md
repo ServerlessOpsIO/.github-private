@@ -1,6 +1,6 @@
 ---
 description: 'AWS Lambda Python coding conventions and guidelines'
-applyTo: '**/src/handlers/*/function.py, **/template.yaml, **/template.yml, **/sam.yaml, **/sam.yml, **/*.sam.yaml, **/*.sam.yml'
+applyTo: '**/src/handlers/*/function.py, **/tests/*/handlers/*/test_function.py, **/template.yaml, **/template.yml, **/sam.yaml, **/sam.yml, **/*.sam.yaml, **/*.sam.yml'
 ---
 
 ## General
