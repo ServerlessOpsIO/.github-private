@@ -95,10 +95,36 @@ applyTo: '**/*.ts'
 
 ## Testing Expectations
 
+- Prefer `jest` for tests unless the project standardizes on another framework.
+- Use descriptive test names that capture behavior, not implementation.
+- Follow the pattern: `describe('Component/Function/Class', () => { it('should do something', () => {}) })`
 - Add or update unit tests with the project's framework and naming style.
 - Expand integration or end-to-end suites when behavior crosses modules or platform APIs.
-- Run targeted test scripts for quick feedback before submitting.
 - Avoid brittle timing assertions; prefer fake timers or injected clocks.
+- Always return promises or use async/await syntax in tests
+- Use `resolves`/`rejects` matchers for promises
+- Set appropriate timeouts for slow tests with `jest.setTimeout()`
+
+### Mocks
+
+- Mock external dependencies (APIs, databases, etc.) to isolate your tests
+- Reset mocks before each test.
+- Use `jest.mock()` for module mocks and
+- Use `jest.mock()` for module-level mocks
+- Use `jest.fn()` for function spies.
+- Use `jest.spyOn()` for specific function mocks
+- Use `mockImplementation()` or `mockReturnValue()` to define mock behavior
+
+### Matchers
+
+- Basic: `expect(value).toBe(expected)`, `expect(value).toEqual(expected)`
+- Truthiness: `expect(value).toBeTruthy()`, `expect(value).toBeFalsy()`
+- Numbers: `expect(value).toBeGreaterThan(3)`, `expect(value).toBeLessThanOrEqual(3)`
+- Strings: `expect(value).toMatch(/pattern/)`, `expect(value).toContain('substring')`
+- Arrays: `expect(array).toContain(item)`, `expect(array).toHaveLength(3)`
+- Objects: `expect(object).toHaveProperty('key', value)`
+- Exceptions: `expect(fn).toThrow()`, `expect(fn).toThrow(Error)`
+- Mock functions: `expect(mockFn).toHaveBeenCalled()`, `expect(mockFn).toHaveBeenCalledWith(arg1, arg2)`
 
 ## Performance & Reliability
 
