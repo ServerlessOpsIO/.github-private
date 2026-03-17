@@ -21,7 +21,7 @@ applyTo: '**/template.yaml, **/template.yml, **/sam.yaml, **/sam.yml, **/*.sam.y
   - Prefer AWS SAM policy templates when they fit the use case for simplicity and maintainability (for example `AmazonDynamoDBReadOnlyAccess`, `AWSLambdaBasicExecutionRole`, `AWSLambdaVPCAccessExecutionRole`).
   - Use inline policies for custom permissions that don't fit a managed policy template, but keep them focused and least-privilege.
 - Set `Runtime` to the same runtime as existing functions in the template.
-  - If no other functions exist, set `Runtime` to the latest supported platform version for the chosen language (for example `python3.14`, `nodejs20.x`) unless there is a specific reason to use an older version (for example dependency compatibility).
+  - If no other functions exist, set `Runtime` to the latest supported platform version for the chosen language (for example `python3.14`, `nodejs24.x`) unless there is a specific reason to use an older version (for example dependency compatibility).
 - Avoid configuring a VPC for Lambda functions unless necessary.
 
 ## Event Sources
