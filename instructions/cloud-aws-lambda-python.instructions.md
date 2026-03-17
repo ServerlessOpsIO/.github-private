@@ -47,11 +47,17 @@ applyTo: '**/src/handlers/*/function.py, **/tests/*/handlers/*/test_function.py,
 - If the function is triggered by a synchronous event source then the expected response from the function should be included in `data/handlers/<FunctionName>/response.json` and its schema in `data/handlers/<FunctionName>/response_schema.json`
 
 ### Tests
+
+- Follow existing repository conventions for test file naming and location.
 - Use the `moto` library for mocking AWS services in unit tests to enable testing without actual AWS resources.
 - Use the `pytest` framework for writing and running unit tests, and follow its conventions for test discovery and organization.
-- Validate all mock data against their schemas in tests to ensure test data integrity.
-- Cover success path, validation failures, and AWS service failure behavior.
+- Use `pytest` fixtures to set up and tear down any necessary test state, including mocking AWS services with `moto` and loading mock data from the `data/handlers/<FunctionName>/` directory.
+- Validate mock data against their schemas in tests.
+- Create an `aws_credentials` fixture that sets up dummy AWS environmental variables with non-empty but invalid string values.
+- Every function in the associated `src/handlers/<FunctionName>/function.py` file should have corresponding unit tests.
+- Cover success path, validation failures, and service failure behavior.
 - Validate that error responses preserve the expected schema and status code mapping.
+
 
 #### File Structure
 - Unit tests: `tests/unit/handlers/<FunctionName>/test_function.py`

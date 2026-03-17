@@ -41,17 +41,20 @@ applyTo: '**/src/handlers/*/function.ts, **/src/handlers/*/function.*.test.ts, *
 
 ### Tests
 
+- Follow existing repository conventions for test file naming and location.
 - Use `jest` for unit tests.
-- Use `aws-sdk-client-mock` for mocking AWS SDK clients in unit tests.
+- Use `aws-sdk-client-mock` and `aws-sdk-client-mock-jest` for mocking AWS SDK clients in unit tests.
 - Prefer deterministic unit tests by mocking AWS SDK clients and external dependencies.
-- Cover success path, validation failures, and AWS service failure behavior.
+- Use `describe()` blocks to organize tests by behavior or logical grouping.
+- Every function in the associated `src/handlers/<FunctionName>/function.ts` file should have corresponding unit tests.
+- Cover success path, validation failures, and service failure behavior.
 - Validate that error responses preserve the expected schema and status code mapping.
 
 #### File Structure
 
 - Unit tests: `src/handlers/<FunctionName>/function.unit.test.ts`
 - Integration tests: `src/handlers/<FunctionName>/function.integration.test.ts`
-- End-to-end tests: `src/handlers/<FunctionName>/function.ete.test.ts
+- End-to-end tests: `src/handlers/<FunctionName>/function.ete.test.ts`
 
 ### Common Code
 
