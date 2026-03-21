@@ -6,7 +6,7 @@ argument-hint: '<function_name> and test type(s) (for example: CreateEntity unit
 
 # AWS Lambda Create Function Tests
 
-Create test files for a Lambda handler that match the target repository's structure, runtime, and existing test conventions.
+Add test files for a Lambda handler that match the target repository's structure, runtime, and existing test conventions.
 
 ## When To Use
 

@@ -6,7 +6,7 @@ argument-hint: '<language> and <function_name> function (for example: TypeScript
 
 # AWS Lambda Create Function
 
-Create a Lambda function file that matches the target repository's structure and coding conventions.
+Add a Lambda function file that matches the target repository's structure and coding conventions.
 
 ## When To Use
 
