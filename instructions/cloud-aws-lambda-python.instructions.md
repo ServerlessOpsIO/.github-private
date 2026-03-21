@@ -39,12 +39,12 @@ applyTo: '**/src/handlers/*/function.py, **/tests/*/handlers/*/test_function.py,
 #### File Structure
 - Each Lambda function gets its own directory: `data/handlers/<FunctionName>/`
 - Mock event goes in `data/handlers/<FunctionName>/event.json`
-- Mock event schema goes in `data/handlers/<FunctionName>/event_schema.json`
+- Mock event schema goes in `data/handlers/<FunctionName>/event.schema.json`
 - Mock event data goes in `data/handlers/<FunctionName>/data.json`
-- Mock event data schema goes in `data/handlers/<FunctionName>/data_schema.json`
+- Mock event data schema goes in `data/handlers/<FunctionName>/data.schema.json`
 - Mock function output goes in `data/handlers/<FunctionName>/output.json`
-- Mock function output schema goes in `data/handlers/<FunctionName>/output_schema.json`
-- If the function is triggered by a synchronous event source then the expected response from the function should be included in `data/handlers/<FunctionName>/response.json` and its schema in `data/handlers/<FunctionName>/response_schema.json`
+- Mock function output schema goes in `data/handlers/<FunctionName>/output.schema.json`
+- If the function is triggered by a synchronous event source then the expected response from the function should be included in `data/handlers/<FunctionName>/response.json` and its schema in `data/handlers/<FunctionName>/response.schema.json`
 
 ### Tests
 
