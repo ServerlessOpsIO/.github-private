@@ -24,6 +24,24 @@ applyTo: '**/template.yaml, **/template.yml, **/sam.yaml, **/sam.yml, **/*.sam.y
   - If no other functions exist, set `Runtime` to the latest supported platform version for the chosen language (for example `python3.14`, `nodejs24.x`) unless there is a specific reason to use an older version (for example dependency compatibility).
 - Avoid configuring a VPC for Lambda functions unless necessary.
 
+### Mock Data
+
+- Every Lambda function should have a mock event and mock event data.
+- Synchronous event sources (eg. API Gateway, Step Functions, Cloudformation Custom Resources) should have mock output.
+- Synchronous event sources that return a response to the caller (eg. API Gateway, Application Load Balancers) should have a mock response.
+- All mocks should also have an associated schema.
+
+#### File Structure
+- Each Lambda function gets its own directory: `data/handlers/<FunctionName>/`
+- Mock event: `data/handlers/<FunctionName>/event.json`
+- Mock event schema: `data/handlers/<FunctionName>/event.schema.json`
+- Mock event data: `data/handlers/<FunctionName>/data.json`
+- Mock event data schema: `data/handlers/<FunctionName>/data.schema.json`
+- Mock function output (if applicable): `data/handlers/<FunctionName>/output.json`
+- Mock function output schema (if applicable): `data/handlers/<FunctionName>/output.schema.json`
+- Mock response (if applicable): `data/handlers/<FunctionName>/response.json`
+- Mock response schema (if applicable): `data/handlers/<FunctionName>/response.schema.json`
+
 ## Event Sources
 
 - Define event sources directly in the function resource when possible for better visibility and simpler maintenance.

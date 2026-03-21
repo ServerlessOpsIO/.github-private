@@ -31,24 +31,6 @@ applyTo: '**/src/handlers/*/function.py, **/tests/*/handlers/*/test_function.py,
 - Include `src/handlers/<FunctionName>/__init__.py` to make it a package
 - Include `src/handlers/<FunctionName>/requirements.txt` with pip-compatible dependencies
 
-### Mock Data
-
-- Every Lambda function should have a mock event and mock event data.
-- Synchronous event sources (eg. API Gateway, Step Functions, Cloudformation Custom Resources) should have mock output.
-- Synchronous event sources that return a response to the caller (eg. API Gateway, Application Load Balancers) should have a mock response.
-- All mocks should also have an associated schema.
-
-#### File Structure
-- Each Lambda function gets its own directory: `data/handlers/<FunctionName>/`
-- Mock event: `data/handlers/<FunctionName>/event.json`
-- Mock event schema: `data/handlers/<FunctionName>/event.schema.json`
-- Mock event data: `data/handlers/<FunctionName>/data.json`
-- Mock event data schema: `data/handlers/<FunctionName>/data.schema.json`
-- Mock function output (if applicable): `data/handlers/<FunctionName>/output.json`
-- Mock function output schema (if applicable): `data/handlers/<FunctionName>/output.schema.json`
-- Mock response (if applicable): `data/handlers/<FunctionName>/response.json`
-- Mock response schema (if applicable): `data/handlers/<FunctionName>/response.schema.json`
-
 ### Tests
 
 - Follow existing repository conventions for test file naming and location.
