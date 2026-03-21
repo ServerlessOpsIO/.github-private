@@ -19,7 +19,7 @@ applyTo: '**/src/handlers/*/function.py, **/tests/*/handlers/*/test_function.py,
 - Include comprehensive error handling and logging for production debugging and monitoring.
 
 #### Code Structure
-- Define a `handler(event, context)` function as the Lambda entry point that validates the event and calls `_main()`.
+- Define a `handler(event, context)` function as the Lambda entry point that validates the event, extracts event data, and passes event data to `_main()`.
 - Define a `_main(data)` function containing the core business logic.
 - Extract helper logic into `_` prefixed functions above `_main` and `handler`.
 - Include error handling and structured logging via `aws-lambda-powertools`.
