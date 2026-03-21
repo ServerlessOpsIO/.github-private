@@ -23,6 +23,7 @@ applyTo: '**/*.py'
 - Maintain proper indentation (use 4 spaces for each level of indentation).
 - Ensure lines do not exceed 96 characters.
 - Use 2 blank lines to separate functions, classes, and code blocks where appropriate.
+- Prefer single quotes over double quotes for strings.
 
 ## Code
 
