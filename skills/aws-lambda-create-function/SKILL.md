@@ -61,8 +61,6 @@ If any input is missing, ask for it before writing files.
 
 - New function file exists at the correct language-specific path.
 - Handler signature matches runtime and trigger expectations.
-- Logging, config, and error handling follow repository conventions.
-- No obvious lint/type errors in the changed file.
 - SAM template points to the correct code path and handler export.
 
 ## Ambiguity Rules

@@ -57,7 +57,6 @@ If one or more inputs are missing, ask before creating files.
 - At least one success and one failure case are covered.
 - Trigger-specific event fixture exists.
 - External dependencies are mocked or isolated.
-- Tests pass with repository test tooling for affected scope.
 
 ## Decision Points
 
