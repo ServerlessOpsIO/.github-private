@@ -29,10 +29,15 @@ If any input is missing, ask for it before writing files.
 2. Detect project conventions.
 3. Inspect existing handler folders and nearby functions to confirm naming style, logging approach, response types, and test layout.
 
-4. Choose the destination path by language.
-* TypeScript: `src/handlers/<FunctionName>/function.ts`
-* Python: `src/handlers/<FunctionName>/function.py`
-* Go: `src/handlers/<FunctionName>/function.go`
+4. Choose the destination path and files by language.
+* Python:
+  * Function: `src/handlers/<FunctionName>/function.py`
+  * Requirements: `src/handlers/<FunctionName>/requirements.txt`
+  * Package file: `src/handlers/<FunctionName>/__init__.py`
+* TypeScript:
+  * Function: `src/handlers/<FunctionName>/function.ts`
+* Go:
+  * Function: `src/handlers/<FunctionName>/function.go`
 
 5. Create the function file with minimal production-ready structure.
 6. Include `handler` entrypoint compatible with the project's runtime and event source.
