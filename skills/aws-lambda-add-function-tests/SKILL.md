@@ -1,7 +1,7 @@
 ---
-name: aws-lambda-create-function-tests
-description: 'Create or update test files for an AWS Lambda function in TypeScript, Python, or Go projects. Use when asked to add unit tests, API event fixtures, and handler-level assertions that match repository conventions and CI tooling.'
-argument-hint: 'Language, function name, and test type (for example: TypeScript CreateEntity unit + integration)'
+name: aws-lambda-add-function-tests
+description: 'Add test files for an AWS Lambda function in TypeScript, Python, or Go projects. Use when asked to add unit tests, API event fixtures, and handler-level assertions that match repository conventions and CI tooling.'
+argument-hint: '<function_name> and test type(s) (for example: CreateEntity unit + integration)'
 ---
 
 # AWS Lambda Create Function Tests
@@ -10,7 +10,7 @@ Create test files for a Lambda handler that match the target repository's struct
 
 ## When To Use
 
-- User asks to create tests for a new or existing Lambda function.
+- User asks to add tests for a new or existing Lambda function.
 - A handler exists and needs baseline test coverage.
 - The repository already has a test framework to follow (for example `pytest`, `jest`, or `go test`).
 

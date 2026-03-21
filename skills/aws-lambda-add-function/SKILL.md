@@ -1,6 +1,6 @@
 ---
-name: aws-lambda-create-function
-description: 'Create a new AWS Lambda function file in an existing project for a specified language (TypeScript, Python, or Go). Use when asked to scaffold Lambda handler code that matches project conventions, folder structure, and SAM integration.'
+name: aws-lambda-add-function
+description: 'Add a new AWS Lambda function file in an existing project for a specified language (TypeScript, Python, or Go). Use when asked to scaffold Lambda handler code that matches project conventions, folder structure, and SAM integration.'
 argument-hint: '<language> and <function_name> function (for example: TypeScript CreateEntity function)'
 ---
 
