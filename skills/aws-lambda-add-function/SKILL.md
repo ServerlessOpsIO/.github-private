@@ -1,7 +1,7 @@
 ---
 name: aws-lambda-add-function
 description: 'Add a new AWS Lambda function file in an existing project for a specified language (TypeScript, Python, or Go). Use when asked to scaffold Lambda handler code that matches project conventions, folder structure, and SAM integration.'
-argument-hint: '<language> and <function_name> function (for example: TypeScript CreateEntity function)'
+argument-hint: '<language> <function_name> function triggered by <event_source> to do <operation> (for example: TypeScript CreateEntity function triggered by API Gateway to create an entity)'
 ---
 
 # AWS Lambda Create Function
@@ -16,10 +16,10 @@ Add a Lambda function file that matches the target repository's structure and co
 
 ## Inputs
 
-- `language`: `typescript` | `python` | `go`
-- `function_name`: logical name for the handler folder (for example `CreateEntity`)
-- `operation`: short intent (for example `create`, `get`, `delete`, `upsert`)
-- `event_source`: API Gateway, EventBridge, SQS, or other trigger
+- `language` (required): `typescript` | `python` | `go`
+- `function_name` (required): logical name for the handler folder (for example `CreateEntity`)
+- `operation` (optional): short intent (for example `create`, `get`, `delete`, `upsert`)
+- `event_source` (optional): API Gateway, EventBridge, SQS, or other trigger
 
 If any input is missing, ask for it before writing files.
 
