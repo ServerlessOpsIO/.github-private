@@ -33,18 +33,21 @@ applyTo: '**/src/handlers/*/function.py, **/tests/*/handlers/*/test_function.py,
 
 ### Mock Data
 
-- Every Lambda function should have a mock event named event, mock event data, and mock function response data. Synchronous event sources should also have a mock Lambda function response.
+- Every Lambda function should have a mock event and mock event data.
+- Synchronous event sources (eg. API Gateway, Step Functions, Cloudformation Custom Resources) should have mock output.
+- Synchronous event sources that return a response to the caller (eg. API Gateway, Application Load Balancers) should have a mock response.
 - All mocks should also have an associated schema.
 
 #### File Structure
 - Each Lambda function gets its own directory: `data/handlers/<FunctionName>/`
-- Mock event goes in `data/handlers/<FunctionName>/event.json`
-- Mock event schema goes in `data/handlers/<FunctionName>/event.schema.json`
-- Mock event data goes in `data/handlers/<FunctionName>/data.json`
-- Mock event data schema goes in `data/handlers/<FunctionName>/data.schema.json`
-- Mock function output goes in `data/handlers/<FunctionName>/output.json`
-- Mock function output schema goes in `data/handlers/<FunctionName>/output.schema.json`
-- If the function is triggered by a synchronous event source then the expected response from the function should be included in `data/handlers/<FunctionName>/response.json` and its schema in `data/handlers/<FunctionName>/response.schema.json`
+- Mock event: `data/handlers/<FunctionName>/event.json`
+- Mock event schema: `data/handlers/<FunctionName>/event.schema.json`
+- Mock event data: `data/handlers/<FunctionName>/data.json`
+- Mock event data schema: `data/handlers/<FunctionName>/data.schema.json`
+- Mock function output (if applicable): `data/handlers/<FunctionName>/output.json`
+- Mock function output schema (if applicable): `data/handlers/<FunctionName>/output.schema.json`
+- Mock response (if applicable): `data/handlers/<FunctionName>/response.json`
+- Mock response schema (if applicable): `data/handlers/<FunctionName>/response.schema.json`
 
 ### Tests
 
