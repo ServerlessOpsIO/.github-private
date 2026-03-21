@@ -45,7 +45,21 @@ applyTo: '**/src/handlers/*/function.ts, **/src/handlers/*/function.*.test.ts, *
 - Use `aws-sdk-client-mock` and `aws-sdk-client-mock-jest` for mocking AWS SDK clients in unit tests.
 - Prefer deterministic unit tests by mocking AWS SDK clients and external dependencies.
 - Use `describe()` blocks to organize tests by behavior or logical grouping.
-- Follow the pattern: `describe(<FunctionName>, () => { describe('should succeed when', () => { it('situation', () => {}) }) describe('should fail when', () => { it('situation', () => {}) }) })`
+- Follow the pattern:
+  ```typescript
+  describe(<FunctionName>, () => {
+    describe('should succeed when', () => {
+      it('situation', () => {
+
+      })
+    })
+
+    describe('should fail when', () => {
+      it('situation', () => {
+
+      })
+    })
+  ```
 - Every function in the associated `src/handlers/<FunctionName>/function.ts` file should have corresponding unit tests.
 - Cover success path, validation failures, and service failure behavior.
 - Validate that error responses preserve the expected schema and status code mapping.
