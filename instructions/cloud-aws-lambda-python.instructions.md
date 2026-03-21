@@ -63,7 +63,7 @@ applyTo: '**/src/handlers/*/function.py, **/tests/*/handlers/*/test_function.py,
 - Unit tests: `tests/unit/handlers/<FunctionName>/test_function.py`
 - Integration tests: `tests/integration/handlers/<FunctionName>/test_function.py`
 - End-to-end tests: `tests/ete/handlers/<FunctionName>/test_function.py`
-- All `tests/` subdirectories must include `__init__.py` files
+- All `tests/` subdirectories must include an empty `__init__.py` files
 
 ### Common Code
 - Common code that is shared across multiple Lambda functions should be placed in the installable package named `common`.
