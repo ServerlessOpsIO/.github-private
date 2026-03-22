@@ -34,7 +34,7 @@ applyTo: '**/template.yaml, **/template.yml, **/sam.yaml, **/sam.yml, **/*.sam.y
 #### File Structure
 - Each Lambda function gets its own directory: `data/handlers/<FunctionName>/`
 - Mock event: `data/handlers/<FunctionName>/event.json`
-- Mock event schema: `data/handlers/<FunctionName>/event.schema.json`
+- Mock event schema (if applicable): `data/handlers/<FunctionName>/event.schema.json`
 - Mock event data: `data/handlers/<FunctionName>/data.json`
 - Mock event data schema: `data/handlers/<FunctionName>/data.schema.json`
 - Mock function output (if applicable): `data/handlers/<FunctionName>/output.json`

@@ -48,14 +48,9 @@ If any input is missing, ask for it before writing files.
 
 11. Validate the scaffold against language expectations.
 
-12. Add mock event and schema files for the declared trigger in the corresponding `data/handlers/<FunctionName>/` directory.
-13. For synchronous event sources, include a mock response file and schema in the corresponding `data/handlers/<FunctionName>/` directory.
-14. Create empty event data file and data schema file in the corresponding `data/handlers/<FunctionName>/` directory.
-15. Create empty output data file and output schema file in the corresponding `data/handlers/<FunctionName>/` directory.
-
-16. Add SAM function resource to template.
-17. Add or update `AWS::Serverless::Function` with correct `CodeUri`, `Handler`, `Runtime`, `MemorySize`, `Timeout`, and `Architectures`.
-18. Keep runtime aligned with existing functions in the same template.
+12. Add SAM function resource to template.
+13. Add or update `AWS::Serverless::Function` with correct `CodeUri`, `Handler`, `Runtime`, `MemorySize`, `Timeout`, and `Architectures`.
+14. Keep runtime aligned with existing functions in the same template.
 
 ## Completion Criteria
 
