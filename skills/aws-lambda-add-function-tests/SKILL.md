@@ -25,31 +25,28 @@ If one or more inputs are missing, ask before creating files.
 
 ## Procedure
 1. Infer `language` and `event_source` based on existing function file and SAM template.
-2. Load relevant instruction files for the target language, AWS Lambda, and AWS Lambda language specifics.
-3. Detect repository test conventions.
-4. Inspect nearby handler tests to confirm folder layout, naming style, mock strategy, and assertion style.
-
-5. Choose destination test paths by language.
-* Python
-  * Unit: `tests/unit/handlers/<FunctionName>/test_function.py`
-  * Integration: `tests/integration/handlers/<FunctionName>/test_function.py`
-  * ETE: `tests/ete/handlers/<FunctionName>/test_function.py`
-* Typescript
-  * Unit: `src/handlers/<FunctionName>/function.unit.test.ts`
-  * Integration: `src/handlers/<FunctionName>/function.integration.test.ts`
-  * ETE: `src/handlers/<FunctionName>/function.ete.test.ts`
-* Go
-  * All: `handlers/<FunctionName>/function_test.go`
-
-6. For unit tests
-* Create fixtures for the data in files under `data/handlers/<FunctionName>/`.
-* Add mocks/fakes following project style.
-
-7. Write core behavior tests.
-* Success path returns expected status/result payload.
-* Validation failure returns mapped error response.
-* Unexpected exception returns safe error response and does not leak internals.
-* Environment variable behavior is covered (set, missing, invalid).
+1. Load relevant instruction files for the target language, AWS Lambda, and AWS Lambda language specifics.
+1. Detect repository test conventions.
+1. Inspect nearby handler tests to confirm folder layout, naming style, mock strategy, and assertion style.
+1. Choose destination test paths by language.
+    * Python
+        * Unit: `tests/unit/handlers/{function_name}/test_function.py`
+        * Integration: `tests/integration/handlers/{function_name}/test_function.py`
+        * ETE: `tests/ete/handlers/{function_name}/test_function.py`
+    * Typescript
+        * Unit: `src/handlers/{function_name}/function.unit.test.ts`
+        * Integration: `src/handlers/{function_name}/function.integration.test.ts`
+        * ETE: `src/handlers/{function_name}/function.ete.test.ts`
+    * Go
+        * All: `handlers/{function_name}/function_test.go`
+1. For unit tests
+    * Create fixtures for the data in files under `data/handlers/{function_name}/`.
+    * Add mocks/fakes following project style.
+1. Write core behavior tests.
+    * Success path returns expected status/result payload.
+    * Validation failure returns mapped error response.
+    * Unexpected exception returns safe error response and does not leak internals.
+    * Environment variable behavior is covered (set, missing, invalid).
 
 ## Completion Criteria
 
