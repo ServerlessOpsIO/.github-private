@@ -23,11 +23,14 @@ Add test files for a Lambda handler that match the target repository's structure
 
 If one or more inputs are missing, ask before creating files.
 
+## Constraints
+- Do not offer to run any tests or validation.
+- Do not offer any next steps to perform.
+- Do not write tests.
+
 ## Procedure
 1. Infer `language` and `event_source` based on existing function file and SAM template.
 1. Load relevant instruction files for the target language, AWS Lambda, and AWS Lambda language specifics.
-1. Detect repository test conventions.
-1. Inspect nearby handler tests to confirm folder layout, naming style, mock strategy, and assertion style.
 1. Choose destination test paths by language.
     * Python
         * Unit: `tests/unit/handlers/{function_name}/test_function.py`
@@ -39,14 +42,6 @@ If one or more inputs are missing, ask before creating files.
         * ETE: `src/handlers/{function_name}/function.ete.test.ts`
     * Go
         * All: `handlers/{function_name}/function_test.go`
-1. For unit tests
-    * Create fixtures for the data in files under `data/handlers/{function_name}/`.
-    * Add mocks/fakes following project style.
-1. Write core behavior tests.
-    * Success path returns expected status/result payload.
-    * Validation failure returns mapped error response.
-    * Unexpected exception returns safe error response and does not leak internals.
-    * Environment variable behavior is covered (set, missing, invalid).
 
 ## Completion Criteria
 

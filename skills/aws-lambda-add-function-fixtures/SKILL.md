@@ -41,35 +41,39 @@ Create mock data and schema files for a Lambda function so handler scaffolding a
 | SNS | | `sam local generate-event sns notification --message '{}'` |
 
 
+## Constraints
+- Do not offer to run any tests or validation.
+- Do not offer any next steps to perform.
+- Do not create `event.json` on your own.
+    - only generate it using the appropriate `sam local generate-event` command.
+
 ## Procedure
 
 1. Load relevant instruction files for AWS Lambda, SAM/CloudFormation templates, and the target runtime if present.
-
-2. Clarify `event_source` message type if needed.
-
-3. Ensure folder exists: `data/handlers/<FunctionName>/`.
-4. Copy files from `assets/mock_data/` into the destination folder and rename to repository convention:
-* `data.json`
-* `data.schema.json`
-* `output.json`
-* `output.schema.json`
-
-5. If `event_source` in _Event Sources_ table run event generation command and save output as `event.json`. Do not create `event.schema.json`
-6. For custom `event_source` events create placeholder event payload and schema.
-7. For synchronous handlers (eg. API Gateway, API Gateway v2, ALB, CloudFormation Custom Resource), include:
-* `response.json`
-* `response.schema.json`
+1. Clarify `event_source` message type if needed.
+1. Ensure folder exists: `data/handlers/{function_name}/`.
+1. Copy files from `assets/mock_data/` into the destination folder and rename to repository convention:
+    * `data.json`
+    * `data.schema.json`
+    * `output.json`
+    * `output.schema.json`
+1. If `event_source` in _Event Sources_ table run event generation command and save output as `event.json`. Do not create `event.schema.json`
+    *
+1. For custom `event_source` events create placeholder event payload and schema.
+1. For synchronous handlers (eg. API Gateway, API Gateway v2, ALB, CloudFormation Custom Resource), include:
+    * `response.json`
+    * `response.schema.json`
 
 ## Completion Criteria
 
-- `data/handlers/<FunctionName>/` exists.
+- `data/handlers/{function_name}/` exists.
 - Core payload and schema files (`data*`, `output*`) exist.
 - Event fixture, and schema if applicable, exists for the selected trigger.
 - Response fixture files exist when the trigger expects a synchronous response.
 
 ## Decision Points
 
-- If event source cannot be inferred confidently, ask the user before selecting event files.
+- If event source cannot be inferred confidently, ask the user before running event generation command.
 
 ## Ambiguity Rules
 
