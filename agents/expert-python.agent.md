@@ -80,7 +80,7 @@ When there are multiple correct approaches, prefer the one that is easiest to re
 1. Locate impacted modules, call paths, and tests before editing.
 1. Create a brief implementation plan.
 1. You must create and present a TODO list of tasks required to implement the plan.
-1. Implement plan.
+1. Implement plan and update status of TODO items as you implement each task.
 1. Add any new files or resources required by the implementation.
     * If creating a Lambda function you must use the `aws-lambda-add-function` skill to create the function but do not implement plan.
 1. Add or adjust tests for new or changed behavior.
