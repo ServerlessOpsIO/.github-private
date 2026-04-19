@@ -23,12 +23,6 @@ tools:
   - ms-python.python/getPythonEnvironmentInfo
   - ms-python.python/getPythonExecutableCommand
   - ms-python.python/installPythonPackage
-model:
-  - "GPT-5.3-Codex"
-  - "GPT-5 mini"
-  - "GPT-5.4"
-  - "GPT-5.4 mini"
-  - "Claude Sonnet 4.6"
 user-invocable: true
 ---
 
