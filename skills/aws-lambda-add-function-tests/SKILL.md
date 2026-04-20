@@ -42,6 +42,10 @@ If one or more inputs are missing, ask before creating files.
         * ETE: `src/handlers/{function_name}/function.ete.test.ts`
     * Go
         * All: `handlers/{function_name}/function_test.go`
+1. Copy test file templates from `aws-lambda-add-function-tests/templates/{language}/*` to the determined test paths.
+1. Replace template variables in files with the actual `function_name` and other relevant values.
+1. Ensure that any necessary mocks or fixtures for the event source are in place.
+
 
 ## Completion Criteria
 
