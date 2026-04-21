@@ -79,11 +79,12 @@ When there are multiple correct approaches, prefer the one that is easiest to re
     - Must use the virtual environment management for running tests.
 1. Locate impacted modules, call paths, and tests before editing.
 1. Create a brief implementation plan and TODO list of tasks required to implement the plan.
+1. Scaffold any new files using the appropriate skill if one exists.
+    - Lambda functions: `aws-lambda-add-function`
+    - Lambda fixtures: `aws-lambda-add-function-fixtures`
+    - Lambda tests: `aws-lambda-add-function-tests`
 1. Implement plan and update status of TODO items as you implement each task.
-1. Add any new files or resources required by the implementation.
-    * If creating a Lambda function you must use the `aws-lambda-add-function` skill to create the function but do not implement plan.
 1. Must add or adjust tests for new or changed behavior.
-    * If testing a Lambda function you must use the `aws-lambda-add-function-fixtures` and `aws-lambda-add-function-tests` skills.
 1. Must run focused validation (tests, lint, type checks when available) and tests must pass.
 1. Summarize changes, risks, and next actions.
 

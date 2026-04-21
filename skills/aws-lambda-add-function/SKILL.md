@@ -42,7 +42,7 @@ If any input is missing, ask for it before writing files.
 1. Inspect existing handler folders and nearby functions to confirm naming style, logging approach, response types, and test layout.
 1. Create function directory: `src/handlers/{function_name}`
 1. Copy function file(s) under this skill's templates based on `language` input
-    * python: `aws-lambda-add-function/templates/{language}/*` -> `src/handlers/{function_name}/`
+    * `aws-lambda-add-function/templates/{language}/*` -> `src/handlers/{function_name}/`
     * If you cannot find a subdirectory matching the language stop all work and tell user why you stopped.
 1. Copy assets (if any) under this skill's assets based on `language` input.
     * `aws-lambda-add-function/assets/{language}/*` -> `src/handlers/{function_name}/`

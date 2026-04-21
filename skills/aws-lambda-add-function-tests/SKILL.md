@@ -31,18 +31,17 @@ If one or more inputs are missing, ask before creating files.
 ## Procedure
 1. Infer `language` and `event_source` based on existing function file and SAM template.
 1. Load relevant instruction files for the target language, AWS Lambda, and AWS Lambda language specifics.
-1. Choose destination test paths by language.
-    * Python
+1. Must copy test file(s) under this skill's templates based on `language` input
+    * python
         * Unit: `tests/unit/handlers/{function_name}/test_function.py`
         * Integration: `tests/integration/handlers/{function_name}/test_function.py`
         * ETE: `tests/ete/handlers/{function_name}/test_function.py`
-    * Typescript
+    * typescript
         * Unit: `src/handlers/{function_name}/function.unit.test.ts`
         * Integration: `src/handlers/{function_name}/function.integration.test.ts`
         * ETE: `src/handlers/{function_name}/function.ete.test.ts`
-    * Go
+    * go
         * All: `handlers/{function_name}/function_test.go`
-1. Copy test file templates from `aws-lambda-add-function-tests/templates/{language}/*` to the determined test paths.
 1. Replace template variables in files with the actual `function_name` and other relevant values.
 1. Ensure that any necessary mocks or fixtures for the event source are in place.
 
